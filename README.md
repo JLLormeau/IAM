@@ -24,8 +24,8 @@
       export EMAILS=email1@domain.com,email2@domain.com,email3@domain.com
 
 ## Run script 
-1- on new project to create users based on email list 
-2- add new user on a specific project 
+1- on new project to create users based on email list   
+2- add new user on a specific project  
 
       python3 IAM_create_user_with_managementzone_access.py
 
