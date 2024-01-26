@@ -5,7 +5,7 @@
 - Account IAM OAuth2 with Scope : `account-idm-write` `account-idm-read`
 - Read [doc dynatrace Oauth2](https://docs.dynatrace.com/docs/dynatrace-api/basics/dynatrace-api-authentication/account-api-authentication)
 
-## Export Variables 
+## Export Variables :
 - DT_OAUTH_ACCOUNT_URN => urn 
 - DT_OAUTH_CLIENT_ID => OAuth Client ID
 - DT_OAUTH_CLIENT_SECRET => OAuth Client Secret
@@ -23,12 +23,13 @@
       export NAMESPACE="prd.myproject"
       export EMAILS=email1@domain.com,email2@domain.com,email3@domain.com
 
-## Run script 
+## Run script :
 - on new project to create users based on email list    
 - add new users for a specific project  
 
       python3 IAM_create_user_with_managementzone_access.py
 
+## Results : 
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/33531bb0-5537-49cb-a6c5-c9267b700df0)
 
 The user will receive this email to access to the dynatrace tenant
