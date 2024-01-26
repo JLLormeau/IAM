@@ -42,7 +42,7 @@ By default, the user has these permission on each project (Management Zone):
 Access on Service view
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/93ffa6a4-ef88-424d-b750-4e0cd7ef42d2)
 
-#With NON Globa Federation in direct access with your own password, use this access URL : https://myaccount.dynatrace.com/profile
+## With NON Globa Federation in direct access with your own password, use this access URL : https://myaccount.dynatrace.com/profile
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/60c17504-49e2-475e-8b97-f05177d5c9c2)
 
 
