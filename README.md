@@ -1,16 +1,17 @@
 # README - Create users with dynatrace IAM
 
 Prerequisie :
-- Python 3.6 +
-- module request
-- linux or windows
+- Python 3.6 + with module request on linux or windows
+- Account IAM OAuth2 with Scope : `account-idm-write` `account-idm-read` => [doc dynatrace](https://docs.dynatrace.com/docs/dynatrace-api/basics/dynatrace-api-authentication/account-api-authentication)
+      
+
 
 Variables 
 - DT_OAUTH_ACCOUNT_URN => urn 
 - DT_OAUTH_CLIENT_ID => OAuth Client ID
 - DT_OAUTH_CLIENT_SECRET => OAuth Client Secret
 - DT_OAUTH_SSO_ENDPOINT => endpoint IAM dynatrace  
-with Scope :  account-idm-write account-idm-read  
+
 Examples :
 
       export DT_OAUTH_ACCOUNT_URN=urn:dtaccount:12345-abcdef-6789-efghijklm
