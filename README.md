@@ -18,7 +18,7 @@
   
 
 - NAMESPACE = name of project (prerequisite : must be created as a Management Zone on tenant side)
-- EMAILS = list of @email (separator ",") to attach to the project NAMESPACE  
+- EMAILS = list of @email (separator ",") to attach them to the project NAMESPACE (based on Management Zone) 
 
       export NAMESPACE="prd.myproject"
       export EMAILS=email1@domain.com,email2@domain.com,email3@domain.com
