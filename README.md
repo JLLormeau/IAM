@@ -12,8 +12,8 @@
 - DT_OAUTH_SSO_ENDPOINT => endpoint IAM dynatrace  
 
       export DT_OAUTH_ACCOUNT_URN=urn:dtaccount:12345-abcdef-6789-efghijklm
-      export DT_OAUTH_CLIENT_ID=dt0s02.ABCDEF
-      export DT_OAUTH_CLIENT_SECRET=dt0s02.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      export DT_OAUTH_CLIENT_ID=dtxx.ABCDEF
+      export DT_OAUTH_CLIENT_SECRET=dtxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       export DT_OAUTH_SSO_ENDPOINT="https://sso.dynatrace.com/sso/oauth2/token"
   
 
