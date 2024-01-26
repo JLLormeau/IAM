@@ -2,7 +2,8 @@
 
 ## Prerequisie :
 - Python 3.6 + with module request on linux or windows
-- Account IAM OAuth2 with Scope : `account-idm-write` `account-idm-read` => [doc dynatrace](https://docs.dynatrace.com/docs/dynatrace-api/basics/dynatrace-api-authentication/account-api-authentication)
+- Account IAM OAuth2 with Scope : `account-idm-write` `account-idm-read`
+- Read [doc dynatrace](https://docs.dynatrace.com/docs/dynatrace-api/basics/dynatrace-api-authentication/account-api-authentication)
 
 ## Export Variables 
 - DT_OAUTH_ACCOUNT_URN => urn 
