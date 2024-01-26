@@ -27,7 +27,7 @@
 1- on new project to create users based on email list 
 2- add new user on a specific project 
 
-      python create_user_access_for_dynatrace.py
+      python3 IAM_create_user_with_managementzone_access.py
 
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/33531bb0-5537-49cb-a6c5-c9267b700df0)
 
