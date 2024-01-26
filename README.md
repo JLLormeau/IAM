@@ -37,4 +37,7 @@ The user will receive this email to access to the dynatrace tenant
 By default, the user has these permission on each project (Management Zone): 
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/844260a9-89d5-4a68-953a-4a324a367741)
 
+Access on Service view
+![image](https://github.com/JLLormeau/IAM/assets/40337213/93ffa6a4-ef88-424d-b750-4e0cd7ef42d2)
+
 
