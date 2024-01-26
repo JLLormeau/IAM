@@ -17,7 +17,7 @@
       export DT_OAUTH_SSO_ENDPOINT="https://sso.dynatrace.com/sso/oauth2/token"
   
 
-- NAMESPACE = name of project (already created as a Management Zone on tenant side)
+- NAMESPACE = name of project (prerequisite : must be created as a Management Zone on tenant side)
 - EMAILS = list of @email (separator ",") to attach to the project NAMESPACE  
 
       export NAMESPACE="prd.myproject"
