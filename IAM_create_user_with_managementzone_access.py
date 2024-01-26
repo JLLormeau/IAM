@@ -18,7 +18,7 @@ Client_ID=os.getenv('DT_OAUTH_CLIENT_ID') #ID	OAuth Client ID.
 Client_Secret=os.getenv('DT_OAUTH_CLIENT_SECRET') #OAuth Client Secret
 SSO_Endpoint=os.getenv('DT_OAUTH_SSO_ENDPOINT') #OAuth SSO endpoint with scope : account-idm-write account-idm-read
 prefix_mz='gke - '
-prefix_mz=''
+#prefix_mz=''
 
 #####projects variables
 Email=list(os.getenv('EMAILS').split(","))#EMAILS=email1@domain.com,email2@domain.com,email3@domain.com
