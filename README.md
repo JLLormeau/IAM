@@ -17,15 +17,15 @@
       export DT_OAUTH_SSO_ENDPOINT="https://sso.dynatrace.com/sso/oauth2/token"
   
 
-- NAMESPACE = name of project (prerequisite : must be created as a Management Zone on tenant side)
-- EMAILS = list of @email (separator ",") to attach them to the project NAMESPACE (based on Management Zone) 
+- NAMESPACE = name of project based on Management Zone (prerequisite : must be created as a Management Zone on tenant side before running this script)
+- EMAILS = list of @email (separator ",") to attach them to the project NAMESPACE  
 
       export NAMESPACE="prd.myproject"
       export EMAILS=email1@domain.com,email2@domain.com,email3@domain.com
 
 ## Run script 
 - on new project to create users based on email list    
-- add new user on a specific project  
+- add new users for a specific project  
 
       python3 IAM_create_user_with_managementzone_access.py
 
