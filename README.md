@@ -18,9 +18,9 @@
   
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/b4dc82c6-e01f-47ca-b8d9-f0023eddcb17)
 
-## Sample1 :  
+## Sample1 :  [link](/Sample1_IAM_create_user_with_managementzone_access)  
 mapping of user to a user group
 
-## Sample2 :  
+## Sample2 :  [link](/Sample2_IAM_binding_policy_with_ug)  
 binding of policiy with `{$BindParam}` to a user group
 
