@@ -1,8 +1,8 @@
-# README - Create users with dynatrace IAM
+# README - IAM Policy
 
 ## Prerequisie :
 - Python 3.6 + with module request on linux or windows
-- Account IAM OAuth2 with Scope : `account-idm-read`, `account-idm-write`, `account-env-read`, `account-env-write`
+- Account IAM OAuth2 with Scope : `account-idm-read`, `account-idm-write`, `account-env-read`, `account-env-write` ...
 - Read [doc dynatrace Oauth2](https://docs.dynatrace.com/docs/dynatrace-api/basics/dynatrace-api-authentication/account-api-authentication)
 
 ## Export Variables :
