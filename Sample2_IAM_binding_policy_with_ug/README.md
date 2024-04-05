@@ -1,4 +1,4 @@
-![image](https://github.com/JLLormeau/IAM/assets/40337213/0602ea5a-458d-4da9-ba0a-2cb331e4cb3e)# Sample2 - binding policy with ug
+# Sample2 - binding policy with ug
 
 ## Prerequisie :
 - Python 3.6 + with module request on linux or windows
@@ -20,6 +20,11 @@
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/b4dc82c6-e01f-47ca-b8d9-f0023eddcb17)
 
 - Create Policy with UI and get the POLICY_ID
+![image](https://github.com/JLLormeau/IAM/assets/40337213/9fcb1758-1ed7-4a15-921a-7169e242392f)
+
+      ALLOW storage:metrics:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}"; 
+      ALLOW storage:events:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}"; 
+      ALLOW storage:logs:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}";
 
 - User Group is created by the script with the policy mapping 
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/d29b66e1-92a9-44ed-a56b-b2a5e0e146a0)
