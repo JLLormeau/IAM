@@ -17,9 +17,9 @@ AccountUiid=Account_Urn.split(":")[2]
 Client_ID=os.getenv('DT_OAUTH_CLIENT_ID') #ID	OAuth Client ID.
 Client_Secret=os.getenv('DT_OAUTH_CLIENT_SECRET') #OAuth Client Secret
 SSO_Endpoint=os.getenv('DT_OAUTH_SSO_ENDPOINT') #OAuth SSO endpoint with scope : account-idm-write account-idm-read
+TENANT_ID=os.getenv('DT_TENANT_ID') #tenantid https://<tenantid>.apps.dynatrace.com
 
 LIST=['namespace_easytrade']
-TENANT_ID='xxxx'
 POLICY_ID='abcdefg-12345-abcd-1234-abcd'
 ##################################
 ## Variables
