@@ -1,4 +1,4 @@
-# README - Create users with dynatrace IAM
+# Sample1 - Create users with dynatrace IAM
 
 ## Prerequisie :
 - Python 3.6 + with module request on linux or windows
