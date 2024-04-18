@@ -1,4 +1,5 @@
-# README - Create users with dynatrace IAM
+# Sample3 - binding policy based on gcp.project.id
+![image](https://github.com/JLLormeau/IAM/assets/40337213/e45b0dcf-a384-487e-8ebd-f4ceccf5eb69)
 
 ## Prerequisie :
 - Python 3.6 + with module request on linux or windows
@@ -9,46 +10,29 @@
 - DT_OAUTH_ACCOUNT_URN => urn 
 - DT_OAUTH_CLIENT_ID => OAuth Client ID
 - DT_OAUTH_CLIENT_SECRET => OAuth Client Secret
-- DT_OAUTH_SSO_ENDPOINT => endpoint IAM dynatrace  
+- DT_OAUTH_SSO_ENDPOINT => endpoint IAM dynatrace
+- DT_TENANT_ID => tenant id  
 
       export DT_OAUTH_ACCOUNT_URN=urn:dtaccount:12345-abcdef-6789-efghijklm
       export DT_OAUTH_CLIENT_ID=dtxx.ABCDEF
       export DT_OAUTH_CLIENT_SECRET=dtxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       export DT_OAUTH_SSO_ENDPOINT="https://sso.dynatrace.com/sso/oauth2/token"
+      export DT_TENANT_ID=abcd123
   
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/b4dc82c6-e01f-47ca-b8d9-f0023eddcb17)
 
-- NAMESPACE = name of project based on Management Zone (prerequisite : must be created as a Management Zone on tenant side before running this script)
-- EMAILS = list of @email (separator ",") to attach them to the project NAMESPACE  
+- Create Policy with UI and get the POLICY_ID  
+![image](https://github.com/JLLormeau/IAM/assets/40337213/9fcb1758-1ed7-4a15-921a-7169e242392f)
 
-      export NAMESPACE="prd.myproject"
-      export EMAILS=email1@domain.com,email2@domain.com,email3@domain.com
+      ALLOW storage:metrics:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}"; 
+      ALLOW storage:events:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}"; 
+      ALLOW storage:logs:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}";
 
-## Run script :
-- on new project to create users based on email list    
-- add new users for a specific project  
+- User Group is created by the script with the policy mapping  
+![image](https://github.com/JLLormeau/IAM/assets/40337213/d29b66e1-92a9-44ed-a56b-b2a5e0e146a0)
 
-      python3 IAM_create_user_with_managementzone_access.py
+- Minimum of righ for a user  
+![image](https://github.com/JLLormeau/IAM/assets/40337213/f11a3d2c-25dc-4d79-a435-c925441b36b2)
 
-## Results : 
-![image](https://github.com/JLLormeau/IAM/assets/40337213/33531bb0-5537-49cb-a6c5-c9267b700df0)
-
-The user will receive this email to access to the dynatrace tenant
-![image](https://github.com/JLLormeau/IAM/assets/40337213/f11c3948-ba3b-4702-a745-62469b3d9d1b)
-
-By default, the user has these permission on each project (Management Zone): 
-![image](https://github.com/JLLormeau/IAM/assets/40337213/844260a9-89d5-4a68-953a-4a324a367741)
-
-Access on Service view
-![image](https://github.com/JLLormeau/IAM/assets/40337213/93ffa6a4-ef88-424d-b750-4e0cd7ef42d2)
-
-## With NON Global Federation 
-for a direct access with your own password, use this access URL : https://myaccount.dynatrace.com/profile
-
-![image](https://github.com/JLLormeau/IAM/assets/40337213/60c17504-49e2-475e-8b97-f05177d5c9c2)
-
-
-
-
-
-
+- Result: Access to the metrics, logs, events only of this namespace 
+![image](https://github.com/JLLormeau/IAM/assets/40337213/0ad1c2ec-c9db-49ed-b55f-cac097618ef7)
