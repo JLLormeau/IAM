@@ -17,11 +17,9 @@
       export DT_OAUTH_CLIENT_SECRET=dtxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       export DT_OAUTH_SSO_ENDPOINT="https://sso.dynatrace.com/sso/oauth2/token"
   
-![image](https://github.com/JLLormeau/IAM/assets/40337213/b4dc82c6-e01f-47ca-b8d9-f0023eddcb17)
 
 - Create Policy with UI and get the POLICY_ID  
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/8c06eafc-d31f-4a3c-b5ee-580535186b82)
-
 
       ALLOW storage:metrics:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
       ALLOW storage:spans:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
@@ -29,12 +27,17 @@
       ALLOW storage:bizevents:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
       ALLOW storage:events:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
 
+- used the script ![image](https://github.com/JLLormeau/IAM/assets/40337213/04541128-b16b-4141-8473-597ae340bddd)
+
+
 - the policy is mapped with the user group  
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/a585f202-19c2-47c6-8e25-0e07139c457e)
 
 - Minimum of righ for a user  
 ALLOW storage:buckets:read;
 + AppEngine - User
+
+
 
 - Result: Access to the metrics
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/edc78b46-e779-4d11-9bb8-ac03cbd8bf02)
