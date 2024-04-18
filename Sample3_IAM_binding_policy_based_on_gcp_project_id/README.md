@@ -36,7 +36,7 @@ Modify :
 - the policy is mapped with the user group  
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/a585f202-19c2-47c6-8e25-0e07139c457e)
 
-- Minimum of righ for a user  
+- The user must also have these policies
 
       ALLOW storage:buckets:read;
       AppEngine - User
