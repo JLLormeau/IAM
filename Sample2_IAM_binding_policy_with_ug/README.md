@@ -1,4 +1,4 @@
-# Sample2 - binding policy with ug
+# Sample2 - binding policy with ug based on namespace
 
 ## Prerequisie :
 - Python 3.6 + with module request on linux or windows
