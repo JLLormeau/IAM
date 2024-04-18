@@ -31,11 +31,13 @@ Modify :
   - LIST : in this script the usergroup has the name of the namespace (the user group is created if it doesn't exist)
   - POLICY_ID (create above)
 
-- User Group is created by the script with the policy mapping  
+- the policy is mapped with the user group  
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/d29b66e1-92a9-44ed-a56b-b2a5e0e146a0)
 
-- Minimum of righ for a user  
-![image](https://github.com/JLLormeau/IAM/assets/40337213/f11a3d2c-25dc-4d79-a435-c925441b36b2)
+- The user must also have these policies
+
+      ALLOW storage:buckets:read;
+      AppEngine - User
 
 - Result: Access to the metrics, logs, events only of this namespace 
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/0ad1c2ec-c9db-49ed-b55f-cac097618ef7)
