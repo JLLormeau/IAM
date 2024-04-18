@@ -29,7 +29,7 @@
 
 - Use this [script](https://raw.githubusercontent.com/JLLormeau/IAM/main/Sample3_IAM_binding_policy_based_on_gcp_project_id/IAM_policy_by_gcp_project_id.py)  
 Modify :   
-  - LIST_GCP_PROJECT : in this script the usergroup has the name of the gcp.project.id
+  - LIST_GCP_PROJECT : in this script the usergroup has the name of the gcp.project.id (the user group is created if it doesn't exist)  
   - POLICY_ID (create above)
 
 
@@ -37,10 +37,9 @@ Modify :
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/a585f202-19c2-47c6-8e25-0e07139c457e)
 
 - Minimum of righ for a user  
-ALLOW storage:buckets:read;
-+ AppEngine - User
 
-
+      ALLOW storage:buckets:read;
+      AppEngine - User
 
 - Result: Access to the metrics
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/edc78b46-e779-4d11-9bb8-ac03cbd8bf02)
