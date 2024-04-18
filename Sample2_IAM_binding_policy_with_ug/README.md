@@ -1,4 +1,5 @@
-# Sample2 - binding policy with ug based on namespace
+# Sample2 - binding policy based on namespace
+![image](https://github.com/JLLormeau/IAM/assets/40337213/a173a7a4-f5fe-4d88-9308-a4b9635704fa)
 
 ## Prerequisie :
 - Python 3.6 + with module request on linux or windows
