@@ -1,4 +1,4 @@
-# Sample3 - binding policy based on gcp.project.id
+# Sample3 - binding policy based on gcp.project.id for the global account
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/e45b0dcf-a384-487e-8ebd-f4ceccf5eb69)
 
 ## Prerequisie :
@@ -11,28 +11,31 @@
 - DT_OAUTH_CLIENT_ID => OAuth Client ID
 - DT_OAUTH_CLIENT_SECRET => OAuth Client Secret
 - DT_OAUTH_SSO_ENDPOINT => endpoint IAM dynatrace
-- DT_TENANT_ID => tenant id  
 
       export DT_OAUTH_ACCOUNT_URN=urn:dtaccount:12345-abcdef-6789-efghijklm
       export DT_OAUTH_CLIENT_ID=dtxx.ABCDEF
       export DT_OAUTH_CLIENT_SECRET=dtxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       export DT_OAUTH_SSO_ENDPOINT="https://sso.dynatrace.com/sso/oauth2/token"
-      export DT_TENANT_ID=abcd123
   
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/b4dc82c6-e01f-47ca-b8d9-f0023eddcb17)
 
 - Create Policy with UI and get the POLICY_ID  
-![image](https://github.com/JLLormeau/IAM/assets/40337213/9fcb1758-1ed7-4a15-921a-7169e242392f)
+![image](https://github.com/JLLormeau/IAM/assets/40337213/8c06eafc-d31f-4a3c-b5ee-580535186b82)
 
-      ALLOW storage:metrics:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}"; 
-      ALLOW storage:events:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}"; 
-      ALLOW storage:logs:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}";
 
-- User Group is created by the script with the policy mapping  
-![image](https://github.com/JLLormeau/IAM/assets/40337213/d29b66e1-92a9-44ed-a56b-b2a5e0e146a0)
+      ALLOW storage:metrics:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
+      ALLOW storage:spans:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
+      ALLOW storage:logs:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
+      ALLOW storage:bizevents:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
+      ALLOW storage:events:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
+
+- the policy is mapped with the user group  
+![image](https://github.com/JLLormeau/IAM/assets/40337213/a585f202-19c2-47c6-8e25-0e07139c457e)
 
 - Minimum of righ for a user  
-![image](https://github.com/JLLormeau/IAM/assets/40337213/f11a3d2c-25dc-4d79-a435-c925441b36b2)
+ALLOW storage:buckets:read;
++ AppEngine - User
 
-- Result: Access to the metrics, logs, events only of this namespace 
-![image](https://github.com/JLLormeau/IAM/assets/40337213/0ad1c2ec-c9db-49ed-b55f-cac097618ef7)
+- Result: Access to the metrics
+![image](https://github.com/JLLormeau/IAM/assets/40337213/edc78b46-e779-4d11-9bb8-ac03cbd8bf02)
+
