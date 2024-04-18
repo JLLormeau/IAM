@@ -29,7 +29,7 @@
 
 - Use this [script](https://raw.githubusercontent.com/JLLormeau/IAM/main/Sample3_IAM_binding_policy_based_on_gcp_project_id/IAM_policy_by_gcp_project_id.py)  
 Modify :   
-  - LIST_GCP_PROJECT : in this script the usergroup has the name of the gcpprojectid
+  - LIST_GCP_PROJECT : in this script the usergroup has the name of the gcp.project.id
   - POLICY_ID (create above)
 
 
