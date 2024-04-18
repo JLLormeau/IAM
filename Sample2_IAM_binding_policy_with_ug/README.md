@@ -18,8 +18,6 @@
       export DT_OAUTH_CLIENT_SECRET=dtxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       export DT_OAUTH_SSO_ENDPOINT="https://sso.dynatrace.com/sso/oauth2/token"
       export DT_TENANT_ID=abcd123
-  
-![image](https://github.com/JLLormeau/IAM/assets/40337213/b4dc82c6-e01f-47ca-b8d9-f0023eddcb17)
 
 - Create Policy with UI and get the POLICY_ID  
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/9fcb1758-1ed7-4a15-921a-7169e242392f)
@@ -27,6 +25,11 @@
       ALLOW storage:metrics:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}"; 
       ALLOW storage:events:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}"; 
       ALLOW storage:logs:read WHERE storage:k8s.namespace.name = "${bindParam:namespace}";
+
+- Use this [script](https://raw.githubusercontent.com/JLLormeau/IAM/main/Sample2_IAM_binding_policy_with_ug/IAM_policy_by_namespace.py)  
+Modify :   
+  - LIST : in this script the usergroup has the name of the namespace (the user group is created if it doesn't exist)
+  - POLICY_ID (create above)
 
 - User Group is created by the script with the policy mapping  
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/d29b66e1-92a9-44ed-a56b-b2a5e0e146a0)
