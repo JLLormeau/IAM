@@ -27,7 +27,10 @@
       ALLOW storage:bizevents:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
       ALLOW storage:events:read WHERE storage:gcp.project.id startsWith "${bindParam:name}";
 
-- used the script ![image](https://github.com/JLLormeau/IAM/assets/40337213/04541128-b16b-4141-8473-597ae340bddd)
+- Use this [script](https://raw.githubusercontent.com/JLLormeau/IAM/main/Sample3_IAM_binding_policy_based_on_gcp_project_id/IAM_policy_by_gcp_project_id.py)
+Modify 
+        LIST_GCP_PROJECT : in this script the usergroup has the name of the gcpprojectid  
+        POLICY_ID (create above)
 
 
 - the policy is mapped with the user group  
