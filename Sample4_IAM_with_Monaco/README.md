@@ -2,7 +2,19 @@
 
 ## Prerequisie :
 - Monacov2 https://docs.dynatrace.com/docs/manage/configuration-as-code/monaco/installation
-- Monaco Tenant configuration scope https://docs.dynatrace.com/docs/manage/configuration-as-code/monaco/guides/create-oauth-client
+- Monaco Accountconfiguration scope https://docs.dynatrace.com/docs/shortlink/configuration-as-code-supported-configuration#account-management-permissions
+
+	  account-idm-read
+	  account-idm-write
+	  account-env-read
+	  account-env-write
+	  iam-policies-management
+	  iam:policies:write
+	  iam:policies:read
+	  iam:bindings:write
+	  iam:bindings:read
+
+- (optional) Monaco Tenant configuration scope https://docs.dynatrace.com/docs/manage/configuration-as-code/monaco/guides/create-oauth-client
 
 	  app-engine:apps:run  
 	  settings:objects:read
@@ -17,18 +29,7 @@
 	  automation:workflows:admin (you need to create a custom policy granting that scope, bind a group to it, and assign your user to that group in Account Management before creating the OAuth client. For detailed information on managing policies)
 	  storage:bucket-definitions:read
 	  storage:bucket-definitions:write
-- Monaco Accountconfiguration scope https://docs.dynatrace.com/docs/shortlink/configuration-as-code-supported-configuration#account-management-permissions
-
-	  account-idm-read
-	  account-idm-write
-	  account-env-read
-	  account-env-write
-	  iam-policies-management
-	  iam:policies:write
-	  iam:policies:read
-	  iam:bindings:write
-	  iam:bindings:read
-
+  
 ## Export Variables :
 
 - DT_ACCOUNT_ID => 12345-abcdef-6789-efghijklm (from account urn = urn:dtaccount:12345-abcdef-6789-efghijklm)
