@@ -44,16 +44,22 @@
 
 ## Download (backup)
 - with manifest
-	monaco account download --manifest manifest.yaml --account my-account --verbose --project backup_iam_policies
+ 
+	  monaco account download --manifest manifest.yaml --account my-account --verbose --project backup_iam_policies
 
 - with manifest
-	monaco account download --uuid %DT_ACCOUNT_ID% --oauth-client-id=DT_OAUTH_CLIENT_ID_MONACO --oauth-client-secret=DT_OAUTH_CLIENT_SECRET_MONACO
+  
+	  monaco account download --uuid %DT_ACCOUNT_ID% --oauth-client-id=DT_OAUTH_CLIENT_ID_MONACO --oauth-client-secret=DT_OAUTH_CLIENT_SECRET_MONACO
 
 ## Deploy account
-monaco account deploy --manifest manifest.yaml --account my-account --verbose --project team_dev
+- monaco cmd
+  
+	  monaco account deploy --manifest manifest.yaml --account my-account --verbose --project team_dev
 
 ## Delete
-monaco account delete --manifest manifest.yaml --file delete.yaml --account my-account
+- monaco cmd
+    
+           monaco account delete --manifest manifest.yaml --file delete.yaml --account my-account
 
 ## Doc
 Manifest with Account_ID = https://docs.dynatrace.com/docs/manage/configuration-as-code/monaco/configuration/account-configuration
