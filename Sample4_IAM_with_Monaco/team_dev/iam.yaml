@@ -1,0 +1,33 @@
+#MZ = team_dev_00
+#env = jzq02463
+
+users:
+- email: monaco@dynatrace.com
+  groups:
+  - type: reference
+    id: team_dev_00
+    
+groups:
+- name: team_dev_00
+  id: team_dev_00
+  description: lab policy env1 test
+  environments:
+  - environment: jzq02463
+    policies:
+    - type: reference
+      id: team_dev_00
+  managementZones:
+  - environment: jzq02463
+    managementZone: team_dev_00
+    permissions:
+    - tenant-viewer
+    
+policies:
+- name: team_dev_00
+  id: team_dev_00
+  level:
+    type: account
+  description: lab policy env1
+  policy: |-
+    ALLOW settings:objects:read,settings:schemas:read, settings:schemas:read WHERE  settings:schemaId = "builtin:anomaly-detection.services";
+    ALLOW settings:objects:write WHERE environment:management-zone="team_dev_00" AND settings:schemaId = "builtin:anomaly-detection.services";

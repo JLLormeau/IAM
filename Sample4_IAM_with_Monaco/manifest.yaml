@@ -1,0 +1,40 @@
+---
+manifestVersion: "1.0"
+projects:
+- name: team_dev
+
+accounts:
+- name: my-account
+  accountUUID:
+    value: DT_ACCOUNT_ID
+    type: environment
+  oAuth:
+    clientId:
+      name: DT_OAUTH_CLIENT_ID_MONACO
+      type: environment
+    clientSecret:
+      name: DT_OAUTH_CLIENT_SECRET_MONACO
+      type: environment
+    tokenEndpoint: 
+      value: "https://sso.dynatrace.com/sso/oauth2/token"
+      
+environmentGroups:
+- name: default
+  environments:
+  - name: Env1
+    url:
+      type: environment
+      value: DT_GRAIL_TENANT_URL
+    auth:
+      token:
+        type: environment
+        name: DT_API_TOKEN
+      oAuth:
+        clientId:
+            name: DT_OAUTH_CLIENT_ID_MONACO
+            type: environment
+        clientSecret:
+            name: DT_OAUTH_CLIENT_SECRET_MONACO
+            type: environment
+        tokenEndpoint: 
+            value: "https://sso.dynatrace.com/sso/oauth2/token"

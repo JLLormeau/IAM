@@ -1,0 +1,9 @@
+delete:
+  - type: user
+    email: monaco@dynatrace.com
+  - type: group
+    name: team_dev_00
+  - type: policy
+    name: team_dev_00
+    level:
+      type: account
