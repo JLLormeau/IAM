@@ -1,7 +1,6 @@
 # README - IAM Policy
 
 ## Prerequisie :
-- Python 3.6 + with module request on linux or windows
 - Account IAM OAuth2 with Scope : `account-idm-read`, `account-idm-write`, `account-env-read`, `account-env-write` ...
 - Read [doc dynatrace Oauth2](https://docs.dynatrace.com/docs/dynatrace-api/basics/dynatrace-api-authentication/account-api-authentication)
 
@@ -26,3 +25,6 @@ binding of policiy with `{$BindParam}` based on namespace
 
 ## Sample3 :  [link](/Sample3_IAM_binding_policy_based_on_gcp_project_id)  
 binding of policiy with `{$BindParam}`  based on gcp.project.id
+
+## Sample4 :  [link](/Sample4_IAM_with_Monaco)  
+Configure user policies, user group and users with Monaco 
