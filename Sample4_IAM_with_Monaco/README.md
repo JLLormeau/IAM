@@ -1,4 +1,4 @@
-# README - Create users with dynatrace IAM
+# README - Configure user policies, user group and users with Monaco
 
 ## Prerequisie :
 - Monacov2 https://docs.dynatrace.com/docs/manage/configuration-as-code/monaco/installation
