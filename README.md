@@ -24,5 +24,5 @@ mapping of user to a user group
 ## Sample2 :  [link](/Sample2_IAM_binding_policy_with_ug)  
 binding of policiy with `{$BindParam}` based on namespace
 
-## Sample3 :  [link](/Sample3_IAM_binding_policy_based_on_gcp_project_i)  
+## Sample3 :  [link](/Sample3_IAM_binding_policy_based_on_gcp_project_id)  
 binding of policiy with `{$BindParam}`  based on gcp.project.id
