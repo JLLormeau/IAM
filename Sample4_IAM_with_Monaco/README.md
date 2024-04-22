@@ -42,7 +42,7 @@
       export DT_OAUTH_CLIENT_SECRET=dtxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       export DT_OAUTH_SSO_ENDPOINT="https://sso.dynatrace.com/sso/oauth2/token"
 
-## Download (backup)
+## Download policies, usergroups and users
 - with manifest
  
 	  monaco account download --manifest manifest.yaml --account my-account --verbose --project backup_iam_policies
