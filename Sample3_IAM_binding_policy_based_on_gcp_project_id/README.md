@@ -1,4 +1,4 @@
-# Sample3 - binding policy based on gcp.project.id for the global account
+![image](https://github.com/JLLormeau/IAM/assets/40337213/830314a3-1c31-4d89-a805-3eb0ab09aa42)# Sample3 - binding policy based on gcp.project.id for the global account
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/e45b0dcf-a384-487e-8ebd-f4ceccf5eb69)
 
 ## Prerequisie :
@@ -38,8 +38,15 @@ Modify :
 
 - The user must also have these policies
 
+      ALLOW app-engine:apps:run;
+      ALLOW document:documents:read, document:documents:write, document:environment-shares:read;
+      ALLOW state:user-app-states:read,state:user-app-states:write;
       ALLOW storage:buckets:read;
+
+or 
+
       AppEngine - User
+      ALLOW storage:buckets:read;
 
 - Result: Access to the metrics
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/edc78b46-e779-4d11-9bb8-ac03cbd8bf02)
