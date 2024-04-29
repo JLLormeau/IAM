@@ -1,4 +1,4 @@
-![image](https://github.com/JLLormeau/IAM/assets/40337213/830314a3-1c31-4d89-a805-3eb0ab09aa42)# Sample3 - binding policy based on gcp.project.id for the global account
+# Sample3 - binding policy based on gcp.project.id for the global account
 ![image](https://github.com/JLLormeau/IAM/assets/40337213/e45b0dcf-a384-487e-8ebd-f4ceccf5eb69)
 
 ## Prerequisie :
