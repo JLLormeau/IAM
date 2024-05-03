@@ -220,7 +220,7 @@ def binding_ug(CLIENT_ID,TOKEN,ugid,namespace):
 IAM_Token=iam_token()
 list_groups(AccountUiid,IAM_Token)
 
-'''
+
 #create UG if not exists
 for name in LIST:
  if name not in UG: 
@@ -231,15 +231,14 @@ IAM_Token=iam_token()
 #bind UG
 for name in LIST:
     binding_ug(AccountUiid,IAM_Token,UG[name],name.split("_")[1])
-'''
 
+'''
 #verif
 for name in LIST:
     uri=API_BINDING_ENV+TENANT_ID+'/bindings/'+POLICY_ID+'/'+UG[name]
     result = queryDynatraceAPI(uri,IAM_Token)
     print(result['policyBindings'])
 
-'''
 #delete UG
 for ug in UG :
     print('delete', ug)
