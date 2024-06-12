@@ -1,6 +1,6 @@
 # README - Configure user policies, user group and users with Monaco
 
-## Prerequisie :
+## Prerequisite :
 - Monacov2 https://docs.dynatrace.com/docs/manage/configuration-as-code/monaco/installation
 - Monaco Accountconfiguration scope https://docs.dynatrace.com/docs/shortlink/configuration-as-code-supported-configuration#account-management-permissions
 
