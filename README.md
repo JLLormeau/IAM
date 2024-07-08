@@ -29,5 +29,5 @@ binding of policiy with `{$BindParam}`  based on gcp.project.id
 ## Sample4 :  [link](/Sample4_IAM_with_Monaco)  
 Configure user policies, user group and users with Monaco 
 
-## Sample5: In Progress [Terraform]
+## Sample5: [Terraform]
 https://registry.terraform.io/providers/dynatrace-oss/dynatrace/latest/docs/resources/iam_policy_bindings_v2
