@@ -30,3 +30,4 @@ binding of policiy with `{$BindParam}`  based on gcp.project.id
 Configure user policies, user group and users with Monaco 
 
 ## Sample5: In Progress [Terraform]
+https://registry.terraform.io/providers/dynatrace-oss/dynatrace/latest/docs/resources/iam_policy_bindings_v2
