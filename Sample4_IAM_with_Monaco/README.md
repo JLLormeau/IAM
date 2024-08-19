@@ -47,7 +47,7 @@
  
 	  monaco account download --manifest manifest.yaml --account my-account --verbose --project backup_iam_policies
 
-- with manifest
+- without manifest
   
 	  monaco account download --uuid %DT_ACCOUNT_ID% --oauth-client-id=DT_OAUTH_CLIENT_ID_MONACO --oauth-client-secret=DT_OAUTH_CLIENT_SECRET_MONACO
 
